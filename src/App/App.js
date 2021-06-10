@@ -15,7 +15,7 @@ class App extends Component {
       <main>
         <h1>Gathering the Art</h1>
         <h2>Art so good it's Magic</h2>
-
+        <Gallery cards={this.state.cards} />
       </main>
     )
   }
