@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Gallery from '../Gallery/Gallery'
 
 class App extends Component {
   constructor() {
