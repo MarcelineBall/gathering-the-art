@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Gallery () => {
+const Gallery = () => {
   return <p>This is where the art will go</p>
 }
 
