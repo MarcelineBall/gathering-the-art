@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import Gallery from '../Gallery/Gallery'
+import cards from '../mockData.js'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      
+      cards: cards
     }
   }
 
