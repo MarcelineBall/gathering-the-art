@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
+import Gallery from '../Gallery/Gallery'
+import cards from '../mockData.js'
 
 class App extends Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      cards: cards
+    }
   }
 
   render() {
@@ -11,6 +15,7 @@ class App extends Component {
       <main>
         <h1>Gathering the Art</h1>
         <h2>Art so good it's Magic</h2>
+        <Gallery cards={this.state.cards} />
       </main>
     )
   }
