@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom'
 
 const Artist = ({ artists }) => {
   const allArtists = artists.map(artist => {
-
+    return(
+      <Link to={`/:${artist}`}>
+        <p>{artist}</p>
+      </Link>
+    )
   })
   return
 }
