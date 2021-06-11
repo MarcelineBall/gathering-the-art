@@ -31,4 +31,4 @@ const artists = [
   "Zelda Zerard"
 ]
 
-export default cards
+export { cards, artists }
