@@ -13,7 +13,7 @@ const Gallery = ( {cards} ) => {
       />
     )
   })
-  return <p>This is where the art will go</p>
+  return allCards
 }
 
 export default Gallery
