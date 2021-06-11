@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import Gallery from '../Gallery/Gallery'
+import { Route, Switch } from 'react-router-dom'
 import { cards, artists } from '../mockData.js'
+import Gallery from '../Gallery/Gallery'
+import Artist from '../Artist/Artist'
 
 class App extends Component {
   constructor() {
