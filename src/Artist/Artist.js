@@ -9,7 +9,7 @@ const Artist = ({ artists }) => {
       </Link>
     )
   })
-  return
+  return allArtists
 }
 
 export default Artist
