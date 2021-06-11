@@ -18,7 +18,9 @@ class App extends Component {
       <main>
         <h1>Gathering the Art</h1>
         <h2>Art so good it's Magic</h2>
-        <Artist artists={this.state.artists} />
+        <Route exact path='/' render={() => {
+          return <Artist artists={this.state.artists} />
+        }} />
         <Gallery cards={this.state.cards} />
       </main>
     )
