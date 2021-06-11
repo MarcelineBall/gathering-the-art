@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Gallery from '../Gallery/Gallery'
-import { cards } from '../mockData.js'
+import { cards, artists } from '../mockData.js'
 
 class App extends Component {
   constructor() {
