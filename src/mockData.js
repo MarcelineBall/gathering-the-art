@@ -25,4 +25,10 @@ const cards = [
   }
 ]
 
+const artists = [
+  "Aaron Aaronson",
+  "Howie Phil Likeskill",
+  "Zelda Zerard"
+]
+
 export default cards
