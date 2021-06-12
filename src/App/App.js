@@ -21,6 +21,9 @@ class App extends Component {
         <Route exact path='/' render={() => {
           return <Artist artists={this.state.artists} />
         }} />
+        <Route path='/:artist' render={({ match }) => {
+          const { artist } = match.params
+        }} />
         <Gallery cards={this.state.cards} />
       </main>
     )
