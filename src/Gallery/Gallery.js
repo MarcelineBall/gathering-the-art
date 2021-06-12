@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from '../Card/Card'
 
-const Gallery = ( {cards} ) => {
+const Gallery = ( {cards, makeFavorite} ) => {
   if (cards) {
     const allCards = cards.map(card => {
       return(
@@ -11,6 +11,7 @@ const Gallery = ( {cards} ) => {
         name={card.name}
         artist={card.artist}
         imageUrl={card.imageUrl}
+        makeFavorite={makeFavorite}
         />
       )
     })

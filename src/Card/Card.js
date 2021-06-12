@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ( {name, artist, imageUrl} ) => {
+const Card = ( {name, artist, imageUrl, makeFavorite} ) => {
   return(
     <article>
       <img src={imageUrl} alt={name} />

@@ -32,7 +32,7 @@ class App extends Component {
           }} />
           <Route path='/:artist' render={({ match }) => {
             const { artist } = match.params
-            return <Gallery cards={this.state.cards} />
+            return <Gallery cards={this.state.cards} makeFavorite={this.makeFavorite}/>
           }} />
           <Route exact path='/' render={() => {
             return <Artist artists={this.state.artists} />
