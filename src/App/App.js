@@ -29,7 +29,14 @@ class App extends Component {
         </Link>
         <Switch>
           <Route exact path='/favorites' render={() => {
-            return <Gallery cards={this.state.favorites} />
+            return(
+              <>
+                <Link to='/'>
+                  <h2>Home</h2>
+                </Link>
+                <Gallery cards={this.state.favorites} />
+              </>
+            )
           }} />
           <Route path='/:artist' render={({ match }) => {
             const { artist } = match.params
