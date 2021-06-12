@@ -17,6 +17,10 @@ class App extends Component {
     }
   }
 
+  componentDidUpdate() {
+    console.log('component updated')
+  }
+
   makeFavorite = (id) => {
     const favoritedCard = this.state.cards.find(card => card.id === id)
     this.setState({ favorites: [...this.state.favorites, favoritedCard] })
@@ -51,7 +55,6 @@ class App extends Component {
           <Route path='/:artist' render={({ match }) => {
             console.log(this.state.cards)
             const { artist } = match.params
-            this.getCardsByArtist(artist)
             return(
               <>
               <Link to='/favorites'>

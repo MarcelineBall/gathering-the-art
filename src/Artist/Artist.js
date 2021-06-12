@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Artist = ({ artists }) => {
+const Artist = ({ artists, getCardsByArtist }) => {
   const allArtists = artists.map(artist => {
     return(
       <Link to={`/${artist}`} key={artist}>
-        <p>{artist}</p>
+        <p onClick={() => getCardsByArtist(artist)}>{artist}</p>
       </Link>
     )
   })
