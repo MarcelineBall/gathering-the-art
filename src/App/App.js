@@ -25,7 +25,7 @@ class App extends Component {
   getCardsByArtist = (artistName) => {
     getCards(artistName)
       .then(data => {
-        this.setState({ cards: data })
+        this.setState({ cards: data.cards })
       })
       .catch(error => {
         this.setState({ error: error })
@@ -57,7 +57,7 @@ class App extends Component {
               <Link to='/favorites'>
                 <h2>View favorites</h2>
               </Link>
-              <Gallery cards={this.state.cards.cards} makeFavorite={this.makeFavorite}/>
+              <Gallery cards={this.state.cards} makeFavorite={this.makeFavorite}/>
               </>
             )
           }} />
