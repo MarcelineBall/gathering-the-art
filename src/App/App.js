@@ -4,6 +4,7 @@ import { cards } from '../mockData.js'
 import artists from '../magicArtists.js'
 import Gallery from '../Gallery/Gallery'
 import Artist from '../Artist/Artist'
+import { getCards } from '../api-calls'
 
 class App extends Component {
   constructor() {
@@ -11,7 +12,8 @@ class App extends Component {
     this.state = {
       cards: cards,
       artists: artists,
-      favorites: []
+      favorites: [],
+      error: null
     }
   }
 
