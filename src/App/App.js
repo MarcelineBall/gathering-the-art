@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   makeFavorite = (id) => {
-    this.setState({ favorites: ...this.state.favorites, id})
+    this.setState({ favorites: [...this.state.favorites, id] })
   }
 
   render() {
