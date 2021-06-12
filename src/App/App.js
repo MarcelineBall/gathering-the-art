@@ -65,7 +65,7 @@ class App extends Component {
               <Link to='/favorites'>
                 <h2>View favorites</h2>
               </Link>
-              <Artist artists={this.state.artists} />
+              <Artist artists={this.state.artists} getCardsByArtist={this.getCardsByArtist}/>
               </>
             )
           }} />
