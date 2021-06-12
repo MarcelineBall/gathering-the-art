@@ -429,3 +429,5 @@ const artists = [
   'Zoltan Boros',
   'Zoltan Boros & Gabor Szikszai'
 ]
+
+export default artists
