@@ -49,7 +49,7 @@ class App extends Component {
             )
           }} />
           <Route path='/:artist' render={({ match }) => {
-            console.log('this started')
+            console.log(this.state.cards)
             const { artist } = match.params
             this.getCardsByArtist(artist)
             return(
@@ -57,7 +57,7 @@ class App extends Component {
               <Link to='/favorites'>
                 <h2>View favorites</h2>
               </Link>
-              <Gallery cards={this.state.cards} makeFavorite={this.makeFavorite}/>
+              <Gallery cards={this.state.cards.cards} makeFavorite={this.makeFavorite}/>
               </>
             )
           }} />
