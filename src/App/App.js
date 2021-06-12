@@ -24,9 +24,6 @@ class App extends Component {
       <main>
         <h1>Gathering the Art</h1>
         <h2>Art so good it's Magic</h2>
-        <Link to='/favorites'>
-          <h2>View favorites</h2>
-        </Link>
         <Switch>
           <Route exact path='/favorites' render={() => {
             return(
@@ -40,10 +37,24 @@ class App extends Component {
           }} />
           <Route path='/:artist' render={({ match }) => {
             const { artist } = match.params
-            return <Gallery cards={this.state.cards} makeFavorite={this.makeFavorite}/>
+            return(
+              <>
+              <Link to='/favorites'>
+                <h2>View favorites</h2>
+              </Link>
+              <Gallery cards={this.state.cards} makeFavorite={this.makeFavorite}/>
+              </>
+            )
           }} />
           <Route exact path='/' render={() => {
-            return <Artist artists={this.state.artists} />
+            return(
+              <>
+              <Link to='/favorites'>
+                <h2>View favorites</h2>
+              </Link>
+              <Artist artists={this.state.artists} />
+              </>
+            )
           }} />
         </Switch>
       </main>
