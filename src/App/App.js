@@ -9,7 +9,8 @@ class App extends Component {
     super()
     this.state = {
       cards: cards,
-      artists: artists
+      artists: artists,
+      favorites: []
     }
   }
 
@@ -23,8 +24,8 @@ class App extends Component {
         }} />
         <Route path='/:artist' render={({ match }) => {
           const { artist } = match.params
+          return <Gallery cards={this.state.cards} />
         }} />
-        <Gallery cards={this.state.cards} />
       </main>
     )
   }
