@@ -61,6 +61,9 @@ class App extends Component {
             }
             return(
               <>
+              <Link to='/'>
+                <h2>Home</h2>
+              </Link>
               <Link to='/favorites'>
                 <h2>View favorites</h2>
               </Link>
