@@ -20,6 +20,13 @@ class App extends Component {
     this.setState({ favorites: [...this.state.favorites, favoritedCard] })
   }
 
+  getCardsByArtist = (artistName) => {
+    getCards(artistName)
+      .then(data => {
+        this.setState({ cards:data })
+      })
+  }
+
   render() {
     return(
       <main>
