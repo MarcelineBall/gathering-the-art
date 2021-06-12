@@ -19,16 +19,18 @@ class App extends Component {
       <main>
         <h1>Gathering the Art</h1>
         <h2>Art so good it's Magic</h2>
-        <Route exact path='/' render={() => {
-          return <Artist artists={this.state.artists} />
-        }} />
-        <Route path='/:artist' render={({ match }) => {
-          const { artist } = match.params
-          return <Gallery cards={this.state.cards} />
-        }} />
-        <Route path='/favorites' render={() => {
-          return <Gallery cards={this.state.favorite} />
-        }} />
+        <Switch>
+          <Route path='/:artist' render={({ match }) => {
+            const { artist } = match.params
+            return <Gallery cards={this.state.cards} />
+          }} />
+          <Route path='/favorites' render={() => {
+            return <Gallery cards={this.state.favorite} />
+          }} />
+          <Route exact path='/' render={() => {
+            return <Artist artists={this.state.artists} />
+          }} />
+        </Switch>
       </main>
     )
   }
