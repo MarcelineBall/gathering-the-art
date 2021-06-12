@@ -25,7 +25,10 @@ class App extends Component {
   getCardsByArtist = (artistName) => {
     getCards(artistName)
       .then(data => {
-        this.setState({ cards:data })
+        this.setState({ cards: data })
+      })
+      .catch(error => {
+        this.setState({ error: error })
       })
   }
 
