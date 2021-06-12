@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Route, Switch, Link } from 'react-router-dom'
-import { cards } from '../mockData.js'
 import artists from '../magicArtists.js'
 import Gallery from '../Gallery/Gallery'
 import Artist from '../Artist/Artist'
