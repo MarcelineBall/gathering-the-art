@@ -26,6 +26,9 @@ class App extends Component {
           const { artist } = match.params
           return <Gallery cards={this.state.cards} />
         }} />
+        <Route path='/favorites' render={() => {
+          return <Gallery cards={this.state.favorite} />
+        }} />
       </main>
     )
   }
