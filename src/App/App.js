@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom'
 import { cards, artists } from '../mockData.js'
 import Gallery from '../Gallery/Gallery'
 import Artist from '../Artist/Artist'
@@ -19,6 +19,9 @@ class App extends Component {
       <main>
         <h1>Gathering the Art</h1>
         <h2>Art so good it's Magic</h2>
+        <Link to='/favorites'>
+          <h2>View favorites</h2>
+        </Link>
         <Switch>
           <Route path='/favorites' render={() => {
             return <Gallery cards={this.state.favorite} />
