@@ -1,13 +1,22 @@
 import React, { Component } from 'react'
+import { Route, Switch, Link } from 'react-router-dom'
+import { cards, artists } from '../mockData.js'
 import Gallery from '../Gallery/Gallery'
-import cards from '../mockData.js'
+import Artist from '../Artist/Artist'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      cards: cards
+      cards: cards,
+      artists: artists,
+      favorites: []
     }
+  }
+
+  makeFavorite = (id) => {
+    const favoritedCard = this.state.cards.find(card => card.id === id)
+    this.setState({ favorites: [...this.state.favorites, favoritedCard] })
   }
 
   render() {
@@ -15,7 +24,39 @@ class App extends Component {
       <main>
         <h1>Gathering the Art</h1>
         <h2>Art so good it's Magic</h2>
-        <Gallery cards={this.state.cards} />
+        <Switch>
+          <Route exact path='/favorites' render={() => {
+            return(
+              <>
+                <Link to='/'>
+                  <h2>Home</h2>
+                </Link>
+                <Gallery cards={this.state.favorites} />
+              </>
+            )
+          }} />
+          <Route path='/:artist' render={({ match }) => {
+            const { artist } = match.params
+            return(
+              <>
+              <Link to='/favorites'>
+                <h2>View favorites</h2>
+              </Link>
+              <Gallery cards={this.state.cards} makeFavorite={this.makeFavorite}/>
+              </>
+            )
+          }} />
+          <Route exact path='/' render={() => {
+            return(
+              <>
+              <Link to='/favorites'>
+                <h2>View favorites</h2>
+              </Link>
+              <Artist artists={this.state.artists} />
+              </>
+            )
+          }} />
+        </Switch>
       </main>
     )
   }

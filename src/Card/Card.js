@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Card = ( {name, artist, imageUrl} ) => {
+const Card = ( {name, artist, imageUrl, id, makeFavorite} ) => {
   return(
     <article>
       <img src={imageUrl} alt={name} />
       <h2>{name}</h2>
-      <button>Favorite</button>
+      <button onClick={() => makeFavorite(id)}>Favorite</button>
     </article>
   )
 }
