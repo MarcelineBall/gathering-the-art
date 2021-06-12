@@ -49,7 +49,9 @@ class App extends Component {
             )
           }} />
           <Route path='/:artist' render={({ match }) => {
+            console.log('this started')
             const { artist } = match.params
+            this.getCardsByArtist(artist)
             return(
               <>
               <Link to='/favorites'>
