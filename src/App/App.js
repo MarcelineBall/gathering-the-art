@@ -16,10 +16,6 @@ class App extends Component {
     }
   }
 
-  componentDidUpdate() {
-    console.log('component updated')
-  }
-
   makeFavorite = (id) => {
     const favoritedCard = this.state.cards.find(card => card.id === id)
     this.setState({ favorites: [...this.state.favorites, favoritedCard] })
