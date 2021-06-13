@@ -22,5 +22,14 @@ const Gallery = ( {cards, makeFavorite} ) => {
   }
 }
 
+Gallery.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    artist: PropTypes.string,
+    imageUrl: PropTypes.string,
+  })),
+  makeFavorite: PropTypes.func
+}
 
 export default Gallery
