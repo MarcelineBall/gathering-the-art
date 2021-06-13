@@ -31,6 +31,14 @@ class App extends Component {
       })
   }
 
+  handleError = (response) => {
+    if (!response.ok) {
+      this.setState({ error: 'Unable to find art by this artist, please try again!'})
+    } else {
+      return response.json()
+    }
+  }
+
   render() {
     return(
       <main>
