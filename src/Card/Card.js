@@ -11,4 +11,12 @@ const Card = ( {name, artist, imageUrl, id, makeFavorite} ) => {
   )
 }
 
+Card.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  artist: PropTypes.string,
+  imageUrl: PropTypes.string,
+  makeFavorite: PropTypes.func
+}
+
 export default Card
