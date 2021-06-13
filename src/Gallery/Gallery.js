@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Card from '../Card/Card'
 
 const Gallery = ( {cards, makeFavorite} ) => {
@@ -20,5 +21,6 @@ const Gallery = ( {cards, makeFavorite} ) => {
     return <h2>You have not favorited any art yet</h2>
   }
 }
+
 
 export default Gallery
