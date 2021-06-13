@@ -43,7 +43,10 @@ class App extends Component {
                 <Link to='/'>
                   <h2>Home</h2>
                 </Link>
-                <Gallery cards={this.state.favorites} />
+                {!this.state.favorites.length &&
+                  <h2>You have not favorited any art yet</h2>}
+                {this.state.favorites.length &&
+                  <Gallery cards={this.state.favorites} />}
               </>
             )
           }} />
