@@ -48,12 +48,9 @@ class App extends Component {
             )
           }} />
           <Route path='/:artist' render={({ match }) => {
-            console.log(this.state.cards)
             const { artist } = match.params
             if (!this.state.cards.length) {
               this.getCardsByArtist(artist)
-            } else {
-              console.log('it didn\'t work', this.state.cards)
             }
             return(
               <>
