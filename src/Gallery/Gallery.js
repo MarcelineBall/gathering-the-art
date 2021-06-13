@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Card from '../Card/Card'
 
 const Gallery = ( {cards, makeFavorite} ) => {
-  if (cards) {
     const allCards = cards.map(card => {
       return(
         <Card
@@ -17,9 +16,6 @@ const Gallery = ( {cards, makeFavorite} ) => {
       )
     })
     return allCards
-  } else {
-    return <h2>You have not favorited any art yet</h2>
-  }
 }
 
 Gallery.propTypes = {
