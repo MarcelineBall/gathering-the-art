@@ -60,7 +60,9 @@ class App extends Component {
               <Link to='/favorites'>
                 <h2>View favorites</h2>
               </Link>
-              {!this.state.cards.length &&
+              {this.state.error &&
+                <h1>There was an error loading the art</h1>}
+              {!this.state.cards.length && !this.state.error &&
                 <h1>Art is loading</h1>}
               {this.state.cards.length &&
                 <Gallery cards={this.state.cards} makeFavorite={this.makeFavorite}/>}
