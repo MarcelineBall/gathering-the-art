@@ -13,4 +13,9 @@ const Artist = ({ artists, getCardsByArtist }) => {
   return allArtists
 }
 
+Artist.propTypes = {
+  artists: PropTypes.arrayOf(PropTypes.string),
+  getCardsByArtist: PropTypes.func
+}
+
 export default Artist
