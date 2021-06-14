@@ -51,7 +51,7 @@ class App extends Component {
                 </Link>
                 {!this.state.favorites.length &&
                   <h2>You have not favorited any art yet</h2>}
-                {this.state.favorites.length &&
+                {!!this.state.favorites.length &&
                 <Gallery cards={this.state.favorites} toggleFavorite={this.toggleFavorite}/>}
               </>
             )
@@ -73,7 +73,7 @@ class App extends Component {
                 <h1>There was an error loading the art</h1>}
               {!this.state.cards.length && !this.state.error &&
                 <h1>Art is loading</h1>}
-              {this.state.cards.length &&
+              {!!this.state.cards.length &&
                 <Gallery cards={this.state.cards} toggleFavorite={this.toggleFavorite}/>}
               </>
             )
