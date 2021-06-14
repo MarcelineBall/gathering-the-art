@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 const Card = ( {name, artist, imageUrl, id, toggleFavorite} ) => {
   return(
     <article>
-      <img src={imageUrl} alt={name} />
-      <h2>{name}</h2>
-      <button onClick={() => toggleFavorite(id)}>Favorite</button>
+      <img className='card-image' src={imageUrl} alt={name} />
+      <h2 className='card-name'>{name}</h2>
+      <button className='button' onClick={() => toggleFavorite(id)}>Favorite</button>
     </article>
   )
 }
