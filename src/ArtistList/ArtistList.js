@@ -4,9 +4,11 @@ import PropTypes from 'prop-types'
 
 const ArtistList = ({ artists, getCardsByArtist }) => {
   const allArtists = artists.map(artist => {
+    const modifiedArtist = artist.split(' ').join('_')
+    console.log(modifiedArtist)
     return(
-      <Link to={`/${artist}`} key={artist}>
-        <p onClick={() => getCardsByArtist(artist)}>{artist}</p>
+      <Link to={`/${modifiedArtist}`} key={modifiedArtist}>
+        <p onClick={() => getCardsByArtist(modifiedArtist)}>{artist}</p>
       </Link>
     )
   })
