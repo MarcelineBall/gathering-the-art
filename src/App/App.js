@@ -18,7 +18,10 @@ class App extends Component {
 
   makeFavorite = (id) => {
     const favoritedCard = this.state.cards.find(card => card.id === id)
-    this.setState({ favorites: [...this.state.favorites, favoritedCard] })
+    const cardIsFavorited = this.state.favorites.filter(favoritedArt => favoritedArt.id === id)
+    if (!cardIsFavorited.length) {
+      this.setState({ favorites: [...this.state.favorites, favoritedCard] })
+    }
   }
 
   getCardsByArtist = (artistName) => {
