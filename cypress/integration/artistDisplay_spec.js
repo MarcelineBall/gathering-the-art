@@ -13,6 +13,8 @@ describe('artistDisplay', () => {
 
   it('should display the cards for that artist', () => {
     cy.visit('http://localhost:3000/Brandon_Kitkouski')
-      
+      .get('main').children('article').should('have.length', 3)
+      .get('h2').contains('Cascade Bluffs')
+      .get('article').contains('button')
   })
 })
