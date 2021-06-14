@@ -20,6 +20,8 @@ describe('artistDisplay', () => {
   })
 
   it('should be able to go to the main page when you hit the home button', () => {
-
+    cy.get('h2').contains('Home').click()
+      .location('pathname').should('eq', '/')
+      .get('p').contains('Aaron Miller')
   })
 })
