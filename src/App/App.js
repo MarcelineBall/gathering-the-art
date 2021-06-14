@@ -46,7 +46,7 @@ class App extends Component {
                 {!this.state.favorites.length &&
                   <h2>You have not favorited any art yet</h2>}
                 {this.state.favorites.length &&
-                <Gallery cards={this.state.favorites} />}
+                <Gallery cards={this.state.favorites} makeFavorite={this.makeFavorite}/>}
               </>
             )
           }} />
