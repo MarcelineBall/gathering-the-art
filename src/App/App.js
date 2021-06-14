@@ -1,22 +1,40 @@
 import React, { Component } from 'react'
 import { Route, Switch, Link } from 'react-router-dom'
-import { cards, artists } from '../mockData.js'
+import artists from '../magicArtists.js'
 import Gallery from '../Gallery/Gallery'
-import Artist from '../Artist/Artist'
+import ArtistList from '../ArtistList/ArtistList'
+import { getCards } from '../api-calls'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      cards: cards,
+      cards: [],
       artists: artists,
-      favorites: []
+      favorites: [],
+      error: null
     }
   }
 
-  makeFavorite = (id) => {
+  toggleFavorite = (id) => {
     const favoritedCard = this.state.cards.find(card => card.id === id)
-    this.setState({ favorites: [...this.state.favorites, favoritedCard] })
+    const cardIsFavorited = this.state.favorites.filter(favoritedArt => favoritedArt.id === id)
+    if (!cardIsFavorited.length) {
+      this.setState({ favorites: [...this.state.favorites, favoritedCard] })
+    } else {
+      const filteredFavoritedList = this.state.favorites.filter(favoritedArt => favoritedArt.id !== id)
+      this.setState({ favorites: filteredFavoritedList })
+    }
+  }
+
+  getCardsByArtist = (artistName) => {
+    getCards(artistName)
+      .then(data => {
+        this.setState({ cards: data.cards })
+      })
+      .catch(error => {
+        this.setState({ error: error })
+      })
   }
 
   render() {
@@ -31,18 +49,32 @@ class App extends Component {
                 <Link to='/'>
                   <h2>Home</h2>
                 </Link>
-                <Gallery cards={this.state.favorites} />
+                {!this.state.favorites.length &&
+                  <h2>You have not favorited any art yet</h2>}
+                {!!this.state.favorites.length &&
+                <Gallery cards={this.state.favorites} toggleFavorite={this.toggleFavorite}/>}
               </>
             )
           }} />
           <Route path='/:artist' render={({ match }) => {
             const { artist } = match.params
+            if (!this.state.cards.length) {
+              this.getCardsByArtist(artist)
+            }
             return(
               <>
+              <Link to='/'>
+                <h2>Home</h2>
+              </Link>
               <Link to='/favorites'>
                 <h2>View favorites</h2>
               </Link>
-              <Gallery cards={this.state.cards} makeFavorite={this.makeFavorite}/>
+              {this.state.error &&
+                <h1>There was an error loading the art</h1>}
+              {!this.state.cards.length && !this.state.error &&
+                <h1>Art is loading</h1>}
+              {!!this.state.cards.length &&
+                <Gallery cards={this.state.cards} toggleFavorite={this.toggleFavorite}/>}
               </>
             )
           }} />
@@ -52,7 +84,7 @@ class App extends Component {
               <Link to='/favorites'>
                 <h2>View favorites</h2>
               </Link>
-              <Artist artists={this.state.artists} />
+              <ArtistList artists={this.state.artists} getCardsByArtist={this.getCardsByArtist}/>
               </>
             )
           }} />
