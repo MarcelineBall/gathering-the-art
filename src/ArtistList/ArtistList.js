@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 const ArtistList = ({ artists, getCardsByArtist }) => {
   const allArtists = artists.map(artist => {
     const modifiedArtist = artist.split(' ').join('_')
-    console.log(modifiedArtist)
     return(
       <Link to={`/${modifiedArtist}`} key={modifiedArtist}>
         <p onClick={() => getCardsByArtist(modifiedArtist)}>{artist}</p>

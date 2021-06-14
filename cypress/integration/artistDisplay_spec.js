@@ -11,5 +11,8 @@ describe('artistDisplay', () => {
     cy.location('pathname').should('eq', '/Brandon_Kitkouski')
   })
 
-
+  it('should display the cards for that artist', () => {
+    cy.visit('http://localhost:3000/Brandon_Kitkouski')
+      
+  })
 })
