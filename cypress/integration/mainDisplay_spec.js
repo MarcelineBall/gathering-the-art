@@ -17,7 +17,7 @@ describe('mainDisplay', () => {
 
   it('should display the list of artists', ()=> {
     cy.fixture('magicArtists').then((magicArtists) => {
-      magicArtists.map(artist => {
+      magicArtists.artists.map(artist => {
         cy.get('p').contains(artist)
       })
     })
