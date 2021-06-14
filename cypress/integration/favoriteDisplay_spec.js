@@ -18,4 +18,15 @@ describe('favoriteDisplay', () => {
       .location('pathname').should('eq', '/favorites')
       .get('h2').contains('You have not favorited any art yet')
   })
+
+  it('should be able to add a card to favorites by clicking the favorite button', () => {
+    cy.visit('http://localhost:3000/Brandon_Kitkouski')
+      .get('button').first().click()
+      .get('h2').contains('View favorites').click()
+      .location('pathname').should('eq', '/favorites')
+      .get('main').children('article').should('have.length', 1)
+      .get('article').find('img')
+      .get('.card-name').contains('Cascade Bluffs')
+      .get('article').find('button')
+  })
 })
