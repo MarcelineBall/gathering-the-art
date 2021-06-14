@@ -19,7 +19,7 @@ describe('mainDisplay', () => {
     cy.get('h2').contains('View favorites')
   })
 
-  it.skip('should display the list of artists', ()=> {
+  it('should display the list of artists', ()=> {
     cy.fixture('magicArtists').then((magicArtists) => {
       magicArtists.artists.map(artist => {
         cy.get('p').contains(artist)
