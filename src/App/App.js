@@ -16,7 +16,7 @@ class App extends Component {
     }
   }
 
-  makeFavorite = (id) => {
+  toggleFavorite = (id) => {
     const favoritedCard = this.state.cards.find(card => card.id === id)
     const cardIsFavorited = this.state.favorites.filter(favoritedArt => favoritedArt.id === id)
     if (!cardIsFavorited.length) {
@@ -52,7 +52,7 @@ class App extends Component {
                 {!this.state.favorites.length &&
                   <h2>You have not favorited any art yet</h2>}
                 {this.state.favorites.length &&
-                <Gallery cards={this.state.favorites} makeFavorite={this.makeFavorite}/>}
+                <Gallery cards={this.state.favorites} toggleFavorite={this.toggleFavorite}/>}
               </>
             )
           }} />
@@ -74,7 +74,7 @@ class App extends Component {
               {!this.state.cards.length && !this.state.error &&
                 <h1>Art is loading</h1>}
               {this.state.cards.length &&
-                <Gallery cards={this.state.cards} makeFavorite={this.makeFavorite}/>}
+                <Gallery cards={this.state.cards} toggleFavorite={this.toggleFavorite}/>}
               </>
             )
           }} />

@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Card = ( {name, artist, imageUrl, id, makeFavorite} ) => {
+const Card = ( {name, artist, imageUrl, id, toggleFavorite} ) => {
   return(
     <article>
       <img src={imageUrl} alt={name} />
       <h2>{name}</h2>
-      <button onClick={() => makeFavorite(id)}>Favorite</button>
+      <button onClick={() => toggleFavorite(id)}>Favorite</button>
     </article>
   )
 }
@@ -16,7 +16,7 @@ Card.propTypes = {
   name: PropTypes.string,
   artist: PropTypes.string,
   imageUrl: PropTypes.string,
-  makeFavorite: PropTypes.func
+  toggleFavorite: PropTypes.func
 }
 
 export default Card

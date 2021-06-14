@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Card from '../Card/Card'
 
-const Gallery = ( {cards, makeFavorite} ) => {
+const Gallery = ( {cards, toggleFavorite} ) => {
     const allCards = cards.map(card => {
       return(
         <Card
@@ -11,7 +11,7 @@ const Gallery = ( {cards, makeFavorite} ) => {
         name={card.name}
         artist={card.artist}
         imageUrl={card.imageUrl}
-        makeFavorite={makeFavorite}
+        toggleFavorite={toggleFavorite}
         />
       )
     })
@@ -25,7 +25,7 @@ Gallery.propTypes = {
     artist: PropTypes.string,
     imageUrl: PropTypes.string,
   })),
-  makeFavorite: PropTypes.func
+  toggleFavorite: PropTypes.func
 }
 
 export default Gallery
