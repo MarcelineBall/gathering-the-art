@@ -24,4 +24,13 @@ describe('artistDisplay', () => {
       .location('pathname').should('eq', '/')
       .get('p').contains('Aaron Miller')
   })
+
+  it('should be able to use the browser\'s back and forth buttons to navigate', () => {
+    cy.visit('http://localhost:3000/')
+      .get('p').contains('Brandon Kitkouski').click()
+      .go('back')
+      .url().should('eq', 'http://localhost:3000/')
+      .go('forward')
+      .url().should('eq', 'http://localhost:3000/Brandon_Kitkouski')
+  })
 })
