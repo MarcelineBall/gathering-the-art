@@ -21,6 +21,9 @@ class App extends Component {
     const cardIsFavorited = this.state.favorites.filter(favoritedArt => favoritedArt.id === id)
     if (!cardIsFavorited.length) {
       this.setState({ favorites: [...this.state.favorites, favoritedCard] })
+    } else {
+      const filteredFavoritedList = this.state.favorites.filter(favoritedArt => favoritedArt.id !== id)
+      this.setState({ favorites: filteredFavoritedList })
     }
   }
 
