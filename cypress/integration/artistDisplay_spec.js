@@ -9,4 +9,6 @@ describe('artistDisplay', () => {
   it('should be able to visit an artist\'s page by clicking on their name', () => {
     cy.get('p').contains('Brandon Kitkouski')
   })
+
+  
 })
