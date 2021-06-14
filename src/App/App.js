@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route, Switch, Link } from 'react-router-dom'
 import artists from '../magicArtists.js'
 import Gallery from '../Gallery/Gallery'
-import Artist from '../Artist/Artist'
+import ArtistList from '../ArtistList/ArtistList'
 import { getCards } from '../api-calls'
 
 class App extends Component {
@@ -84,7 +84,7 @@ class App extends Component {
               <Link to='/favorites'>
                 <h2>View favorites</h2>
               </Link>
-              <Artist artists={this.state.artists} getCardsByArtist={this.getCardsByArtist}/>
+              <ArtistList artists={this.state.artists} getCardsByArtist={this.getCardsByArtist}/>
               </>
             )
           }} />
