@@ -10,4 +10,10 @@ describe('mainDisplay', () => {
   it('should display the tagline', () => {
     cy.get('h2').contains('Art so good it\'s Magic')
   })
+
+  it('should display the link to favorites', () => {
+    cy.get('h2').contains('View favorites')
+  })
+
+  
 })
