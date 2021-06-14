@@ -11,9 +11,6 @@ My learning goals for this app were:
 * Gain a better understanding of how to use Cypress to do end-to-end testing
 * Using more atomic commits through the project
 
-## Contributer
-* [Marceline Ball](https://github.com/MarcelineBall)
-
 ## Setup Instructions
 
 1. Clone the repo onto your machine and cd into it
@@ -29,6 +26,16 @@ My learning goals for this app were:
 * Click the favorite button a second time to remove the card from favorites
 * Click on the home button to return home
 * Click on the View favorites button to view your favorited cards
+
+## Author
+<table>
+    <tr>
+      <td><a href="https://github.com/MarcelineBall">Marceline Ball</td>
+    </tr>
+    <tr>
+      <td><img src="https://avatars.githubusercontent.com/u/65052658?s=400&u=aa1256eb27d8fd551cc2b8e6548269aa885b703c&v=4" alt="Marceline Ball" width="125" height="auto" /></td>
+    </tr>
+</table>
 
 ## Technologies Used
 
