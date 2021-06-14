@@ -1,0 +1,271 @@
+{
+  "cards": [
+      {
+        "name": "Cascade Bluffs",
+        "cmc": 0.0,
+        "colorIdentity": [
+            "R",
+            "U"
+        ],
+        "type": "Land",
+        "types": [
+            "Land"
+        ],
+        "rarity": "Rare",
+        "set": "2XM",
+        "setName": "Double Masters",
+        "text": "{T}: Add {C}.\n{U/R}, {T}: Add {U}{U}, {U}{R}, or {R}{R}.",
+        "flavor": "Travelers bathe in the falls to wash away curses from the pucas who lurk nearby.",
+        "artist": "Brandon Kitkouski",
+        "number": "313",
+        "layout": "normal",
+        "multiverseid": "489986",
+        "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=489986&type=card",
+        "foreignNames": [
+            {
+                "name": "Uferklippen-Wasserfall",
+                "text": "{T}: Erzeuge {C}.\n{U/R}, {T}: Erzeuge {U}{U}, {U}{R} oder {R}{R}.",
+                "type": "Land",
+                "flavor": "Reisende baden in den Fällen, um die Flüche der in der Nähe lauernden Phookas abzuwaschen.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=490318&type=card",
+                "language": "German",
+                "multiverseid": 490318
+            },
+            {
+                "name": "Saillies de la cascade",
+                "text": "{T} : Ajoutez {C}.\n{U/R}, {T} : Ajoutez {U}{U}, {U}{R} ou {R}{R}.",
+                "type": "Terrain",
+                "flavor": "Les voyageurs se baignent dans la cascade pour se laver des malédictions des puccas qui rôdent dans les parages.",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=490650&type=card",
+                "language": "French",
+                "multiverseid": 490650
+            },
+            {
+                "name": "滝の断崖",
+                "text": "{T}：{C}を加える。\n{U/R}, {T}：{U}{U}か{U}{R}か{R}{R}を加える。",
+                "type": "土地",
+                "flavor": "旅人は滝壺に沐浴し、近くをうろつくプーカからの呪いを洗い流す。",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=490982&type=card",
+                "language": "Japanese",
+                "multiverseid": 490982
+            },
+            {
+                "name": "飞瀑绝壁",
+                "text": "{T}：加{C}。\n{U/R}，{T}：加{U}{U}，{U}{R}或{R}{R}。",
+                "type": "地",
+                "flavor": "旅人在瀑布中沐浴，好涤清附近出没的铺卡所施之诅咒。",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=491314&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 491314
+            }
+        ],
+        "printings": [
+            "2XM",
+            "A25",
+            "EVE",
+            "EXP"
+        ],
+        "originalText": "{T}: Add {C}.\n{UR}, {T}: Add {U}{U}, {U}{R}, or {R}{R}.",
+        "originalType": "Land",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "id": "bf8eda89-5ce5-5fa8-b454-088fea96da5d"
+    },
+    {
+        "name": "Presence of Gond",
+        "manaCost": "{2}{G}",
+        "cmc": 3.0,
+        "colors": [
+            "Green"
+        ],
+        "colorIdentity": [
+            "G"
+        ],
+        "type": "Enchantment — Aura",
+        "types": [
+            "Enchantment"
+        ],
+        "subtypes": [
+            "Aura"
+        ],
+        "rarity": "Common",
+        "set": "A25",
+        "setName": "Masters 25",
+        "text": "Enchant creature\nEnchanted creature has \"{T}: Create a 1/1 green Elf Warrior creature token.\"",
+        "flavor": "\"Here lies Gond, hero of Safehold Taldwen. May he ever guide our quest.\"",
+        "artist": "Brandon Kitkouski",
+        "number": "184",
+        "layout": "normal",
+        "multiverseid": "442173",
+        "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442173&type=card",
+        "watermark": "set (SHM)",
+        "rulings": [
+            {
+                "date": "2008-05-01",
+                "text": "The creature’s controller, not Presence of Gond’s controller, is the one who can activate the ability, so that’s the player who will get the token."
+            }
+        ],
+        "foreignNames": [
+            {
+                "name": "ゴンドの存在",
+                "text": "エンチャント（クリーチャー）\nエンチャントされているクリーチャーは「{T}：緑の１/１のエルフ・戦士・クリーチャー・トークンを１体生成する。」を持つ。",
+                "type": "エンチャント — オーラ",
+                "flavor": "「トールドウェン安寧砦の英雄ゴンド、ここに眠る。我等の試練に彼の守りあらんことを。」",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442422&type=card",
+                "language": "Japanese",
+                "multiverseid": 442422
+            },
+            {
+                "name": "刚德现身",
+                "text": "结附于生物\n所结附的生物具有「{T}：派出一个1/1绿色妖精／战士衍生生物。」",
+                "type": "结界 ～灵气",
+                "flavor": "「刚德，塔德温华域的英雄，在此长眠。愿他永远领导我们的探索。」",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442671&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 442671
+            }
+        ],
+        "printings": [
+            "A25",
+            "C13",
+            "CMA",
+            "JMP",
+            "SHM"
+        ],
+        "originalText": "Enchant creature\nEnchanted creature has \"{T}: Create a 1/1 green Elf Warrior creature token.\"",
+        "originalType": "Enchantment — Aura",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Gladiator",
+                "legality": "Legal"
+            },
+            {
+                "format": "Historic",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Pauper",
+                "legality": "Legal"
+            },
+            {
+                "format": "Penny",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+        "id": "658df6d5-3752-5dd7-a26c-baf5e0491c17"
+    },
+    {
+        "name": "Cascade Bluffs",
+        "cmc": 0.0,
+        "colorIdentity": [
+            "R",
+            "U"
+        ],
+        "type": "Land",
+        "types": [
+            "Land"
+        ],
+        "rarity": "Rare",
+        "set": "A25",
+        "setName": "Masters 25",
+        "text": "{T}: Add {C}.\n{U/R}, {T}: Add {U}{U}, {U}{R}, or {R}{R}.",
+        "flavor": "Travelers bathe in the falls to wash away curses from the pucas who lurk nearby.",
+        "artist": "Brandon Kitkouski",
+        "number": "237",
+        "layout": "normal",
+        "multiverseid": "442226",
+        "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442226&type=card",
+        "watermark": "set (EVE)",
+        "foreignNames": [
+            {
+                "name": "滝の断崖",
+                "text": "{T}：あなたのマナ・プールに{C}を加える。\n{U/R}, {T}：あなたのマナ・プールに{U}{U}か{U}{R}か{R}{R}を加える。",
+                "type": "土地",
+                "flavor": "旅人は滝壺に沐浴し、近くをうろつくプーカからの呪いを洗い流す。",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442475&type=card",
+                "language": "Japanese",
+                "multiverseid": 442475
+            },
+            {
+                "name": "飞瀑绝壁",
+                "text": "{T}：加{C}到你的法术力池中。\n{U/R}，{T}：加{U}{U}，{U}{R}或{R}{R}到你的法术力池中。",
+                "type": "地",
+                "flavor": "旅人在瀑布中沐浴，好涤清附近出没的铺卡所施之诅咒。",
+                "imageUrl": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442724&type=card",
+                "language": "Chinese Simplified",
+                "multiverseid": 442724
+            }
+        ],
+        "printings": [
+            "2XM",
+            "A25",
+            "EVE",
+            "EXP"
+        ],
+        "originalText": "{T}: Add {C} to your mana pool.\n{UR}, {T}: Add {U}{U}, {U}{R}, or {R}{R} to your mana pool.",
+        "originalType": "Land",
+        "legalities": [
+            {
+                "format": "Commander",
+                "legality": "Legal"
+            },
+            {
+                "format": "Duel",
+                "legality": "Legal"
+            },
+            {
+                "format": "Legacy",
+                "legality": "Legal"
+            },
+            {
+                "format": "Modern",
+                "legality": "Legal"
+            },
+            {
+                "format": "Vintage",
+                "legality": "Legal"
+            }
+        ],
+      "id": "3fd09e7e-e707-52b5-82e7-75d763e37211"
+    }
+}
