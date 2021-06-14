@@ -5,7 +5,7 @@ const Card = ( {name, artist, imageUrl, id, toggleFavorite} ) => {
   return(
     <article>
       <img className='card-image' src={imageUrl} alt={name} />
-      <h2 className='cardName'>{name}</h2>
+      <h2 className='card-name'>{name}</h2>
       <button className='button' onClick={() => toggleFavorite(id)}>Favorite</button>
     </article>
   )
