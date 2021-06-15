@@ -9,7 +9,6 @@ const Gallery = ( {cards, toggleFavorite} ) => {
         id={card.id}
         key={card.id}
         name={card.name}
-        artist={card.artist}
         imageUrl={card.imageUrl}
         toggleFavorite={toggleFavorite}
         />
@@ -22,7 +21,6 @@ Gallery.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
     name: PropTypes.string,
-    artist: PropTypes.string,
     imageUrl: PropTypes.string,
   })),
   toggleFavorite: PropTypes.func

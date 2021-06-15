@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Card = ( {name, artist, imageUrl, id, toggleFavorite} ) => {
+const Card = ( {name, imageUrl, id, toggleFavorite} ) => {
   return(
     <article>
       <img className='card-image' src={imageUrl} alt={name} />
@@ -14,7 +14,6 @@ const Card = ( {name, artist, imageUrl, id, toggleFavorite} ) => {
 Card.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
-  artist: PropTypes.string,
   imageUrl: PropTypes.string,
   toggleFavorite: PropTypes.func
 }
