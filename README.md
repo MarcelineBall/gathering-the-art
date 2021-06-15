@@ -47,4 +47,4 @@ My learning goals for this app were:
 
 ## Reflections
 
-I feel like it was good experience trying to think of particular users when designing an app, and I think it will help with how I design apps in the future. This was also my first time using a public api to pull in data, and that gave me a better sense of what to expect looking at public api's, how to use them, and understanding how to deal with more data than you will need. I feel like a gained a better understanding of what an atom commit is, and the workflow required to consistantly make more atomic commits.
+I feel like it was good experience trying to think of particular users in terms of user personas when designing an app, and I think it will help with how I design apps in the future. This was also my first time using a public api to pull in data, and that gave me a better sense of what to expect when looking at public api's, how to use them, and understanding how to deal with more data than you will need. I feel like a gained a better understanding of what an atomic commit is, and the workflow required to consistantly make more atomic commits.
