@@ -15,8 +15,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-server": "npm start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "start-server-and-test start-server http://localhost:3000 cy:run",
+    "cy:run": "cypress run",
     "eject": "react-scripts eject",
     "cypress": "./node_modules/.bin/cypress open"
   },
@@ -39,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^7.5.0"
+    "cypress": "^7.5.0",
+    "start-server-and-test": "^1.12.5"
   }
 }
